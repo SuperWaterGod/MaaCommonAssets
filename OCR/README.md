@@ -7,6 +7,12 @@ Awesome multilingual OCR toolkits based on PaddlePaddle (practical ultra lightwe
 
 ## command
 
+### det v6
+
+```bash
+paddle2onnx --model_dir . --model_filename inference.json --params_filename inference.pdiparams --save_file det.onnx --opset_version 16 --enable_verbose True
+```
+
 ### det v5
 
 ```bash
@@ -21,6 +27,12 @@ paddle2onnx --model_dir . --model_filename inference.pdmodel --params_filename i
 
 ```bash
 python -m paddle2onnx.optimize --input_model det_unopt.onnx --output_model det.onnx
+```
+
+### rec v6
+
+```bash
+paddle2onnx --model_dir . --model_filename inference.json --params_filename inference.pdiparams --save_file rec.onnx --opset_version 16 --enable_verbose True
 ```
 
 ### rec v5
